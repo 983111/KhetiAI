@@ -1,66 +1,103 @@
-hetiAI (farms)
-KhetiAI is a comprehensive Flutter-based mobile application designed to empower farmers and agricultural stakeholders. The app integrates modern technologies like Supabase for backend services, real-time weather tracking, marketplace capabilities, and AI-driven plant disease detection.
+# 🌾 KhetiAI (Farms)
 
-Features
-Secure Authentication: Robust user onboarding with Sign-Up, Login, and OTP verification powered by Supabase.
+KhetiAI is a comprehensive Flutter-based mobile application designed to empower farmers and agricultural stakeholders. By integrating modern technologies like Supabase for backend services, real-time weather tracking, and AI-driven support, the app serves as a versatile tool for farm management and technical assistance.
 
-Plant Disease Detection: AI-integrated service to help identify and manage crop health.
+---
 
-Agricultural Marketplace: A platform for users to browse, post, and manage agricultural products and services.
+## 🚀 Core Features
 
-Budget & Finance Management: Tools for farmers to track transactions and manage agricultural budgets.
+### 🔐 Secure Authentication
+- Sign-Up & Login system  
+- OTP Verification  
+- Powered by Supabase Authentication  
 
-Weather & Location Services: Real-time weather updates and geolocation features to provide localized farming advice.
+### 🤖 AI Farming Assistant
+- Real-time chatbot support  
+- Crop management advice  
+- Weather-based recommendations  
+- Pest control guidance  
+- Equipment suggestions  
 
-AI Chatbot: An interactive chatbot to assist users with agricultural queries.
+### 🌿 Plant Disease Detection
+- Upload or capture leaf images  
+- AI-based disease identification  
+- Treatment recommendations  
 
-Tech Stack
-Frontend: Flutter (v3.8.1 SDK or higher)
+### 🛒 Agricultural Marketplace
+- Post products for sale or rent  
+- Browse marketplace listings  
+- Search and filter options  
+- Multiple pricing models:
+  - Hourly
+  - Daily
+  - Fixed  
+- Image upload & location support  
 
-Backend: Supabase (Database & Authentication)
+### 💰 Budget & Finance Management
+- Track income & expenses  
+- Daily, monthly, yearly views  
+- Detailed transaction logs  
+- Secure Row Level Security (RLS)  
 
-Key Libraries:
+### 🌦 Real-Time Weather
+- Localized weather data  
+- 7-day forecast  
+- Humidity tracking  
+- Wind speed updates  
 
-geolocator & geocoding: For location-based services.
+---
 
-image_picker: For capturing/uploading plant photos for disease analysis.
+## 🏗 Technical Architecture
 
-intl: For localized date and currency formatting.
+### 🧰 Tech Stack
+- **Frontend:** Flutter (SDK ^3.8.1)  
+- **Backend:** Supabase (Database, Authentication, Storage)  
 
-url_launcher: For external links and communication.
+### 📦 Key Libraries
+- geolocator  
+- image_picker  
+- intl  
+- url_launcher  
+- carousel_slider  
 
-Getting Started
-Prerequisites
-Flutter SDK installed on your machine.
+---
 
-A Supabase project created for backend services.
+## 🗄 Database Schema
 
-Installation
-Clone the repository:
+### 👤 users Table
+- User profile information  
+- Contact details  
+- Account metadata  
 
-Bash
-git clone [repository-url]
-Install dependencies:
+### 📊 transactions Table
+- Financial records  
+- Linked to user accounts  
+- Secured with Row Level Security (RLS)  
 
-Bash
-flutter pub get
-Configure Supabase:
-Ensure your Supabase credentials (URL and Anon Key) are correctly set up in lib/services/SupabaseConfig.dart.
+### 🛍 Marketplace Data
+- Product listings  
+- Pricing model  
+- Location data  
+- Image storage  
 
-Run the application:
+---
 
-Bash
-flutter run
-Project Structure
-The project follows a modular structure for scalability:
+## ⚙️ Getting Started
 
-lib/screens/: Contains all UI views (Home, Marketplace, Weather, etc.).
+### ✅ Prerequisites
+- Flutter SDK installed  
+- Supabase project created  
 
-lib/services/: Handles logic for Auth, Budgeting, and API integrations.
+### 📥 Installation
 
-lib/widgets/: Reusable UI components like the AddTransactionSheet.
+1. Clone the repository:
 
-assets/: Contains application imagery (login/OTP illustrations).
+```bash
+git clone <https://github.com/983111/KhetiAI>
 
-License
-This project is private and not intended for publication to pub.dev
+
+lib/
+ ├── screens/      # UI views (Marketplace, Budget, Weather, etc.)
+ ├── services/     # Authentication, Marketplace, AI logic
+ ├── widgets/      # Reusable UI components
+assets/            # Images & onboarding illustrations
